@@ -7,7 +7,6 @@ import { defineConfig } from "vite";
 const host = process.env.TAURI_DEV_HOST;
 
 // https://vite.dev/config/
-// deno-lint-ignore require-await
 export default defineConfig(async () => ({
 	plugins: [react(), tailwindcss()],
 

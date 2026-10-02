@@ -44,7 +44,8 @@ export function Input({
 					className={inputClassName}
 					data-slot='input'
 					size={typeof size === 'number' ? size : undefined}
-					{...props}
+					// Base UI allows `style` to be a function of state, which a native input cannot accept.
+					{...(props as React.InputHTMLAttributes<HTMLInputElement>)}
 				/>
 			) : (
 				<InputPrimitive
